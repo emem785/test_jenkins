@@ -1,13 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'paulex10/androidsdk-gradle-mpos:v1.0'
-    }
-  }
-
-  environment {
-    PLASTICSCM_WORKSPACE_NAME = "${env.ANDROID_HOME}"
-  }
+  agent any
 
   stages {
     stage('assemble-topwise-dev') {
